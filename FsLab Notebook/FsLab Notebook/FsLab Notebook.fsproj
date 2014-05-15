@@ -54,6 +54,12 @@
   <ItemGroup>
     <Compile Include="tools\Formatters.fs" />
     <Compile Include="tools\Runner.fs" />
+    <None Include="tools\app.config" />
+    <None Include="styles\template.html" />
+    <None Include="styles\style.css" />
+    <None Include="styles\deedle.css" />
+    <None Include="styles\tips.js" />
+    <None Include="packages.config" />
     <None Include="03-ScatterPlots.fsx" />
     <None Include="04-BarCharts.fsx" />
     <None Include="05-PieCharts.fsx" />
@@ -61,13 +67,7 @@
     <None Include="07-AdmissionsCaseStudy.fsx" />
     <None Include="08-Probability.fsx" />
     <None Include="09-ConditionalProbability.fsx" />
-    <None Include="10-BayesRule.fsx" />
-    <None Include="tools\app.config" />
-    <None Include="styles\template.html" />
-    <None Include="styles\style.css" />
-    <None Include="styles\deedle.css" />
-    <None Include="styles\tips.js" />
-    <None Include="packages.config" />
+    <None Include="10-BayesRule.fsx" />    
     <None Include="11-ProgrammingBayesRule.fsx" />
   </ItemGroup>
   <ItemGroup>
