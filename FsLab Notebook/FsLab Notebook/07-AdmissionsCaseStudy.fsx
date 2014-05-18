@@ -1,12 +1,8 @@
-﻿(*** hide ***)
-#I ".."
-#load "packages/FsLab.0.0.13-beta/FsLab.fsx"
-open FSharp.Charting
-(**
+﻿(**
 Admissions Case Study
 =====================
 
-F# code for [Admissions Case Study] unit.
+Note for [Admissions Case Study] unit.
 *)
 Data:
                 MALE                             FEMALE                  
