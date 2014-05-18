@@ -9,6 +9,8 @@ Bayes Rule
 
 F# code for [Bayes Rule] unit. Bayes Rule is named after [Thomas Bayes].
 
+$ \Pr(A|B)=\frac{\Pr(B|A)\Pr(A)}{\Pr(B|A)\Pr(A)+\Pr(B|\neg A)\Pr(\neg A)} $ [*](http://slantchev.ucsd.edu/edu/latex/math.html)
+
 P(C) = 0.01
 
 TEST: 
