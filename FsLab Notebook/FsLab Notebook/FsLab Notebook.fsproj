@@ -73,6 +73,7 @@
     <None Include="12-CorrelationVsCausation.fsx" />
     <None Include="13-Estimation.fsx" />
     <None Include="14-Averages.fsx" />
+    <None Include="15-Variance.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CSharpFormat">
