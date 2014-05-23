@@ -123,6 +123,72 @@
 <pre><code>4.0
 </code></pre>
 
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="i">ages&#39;</span> <span class="o">=</span> [<span class="n">35.</span>;<span class="n">36.</span>;<span class="n">4.</span>;<span class="n">3.</span>;<span class="n">32.</span>;<span class="n">33.</span>;<span class="n">4.</span>;<span class="n">32.</span>;<span class="n">3.</span>;<span class="n">38.</span>;<span class="n">4.</span>]
+<span onmouseout="hideTip(event, 'fs11', 15)" onmouseover="showTip(event, 'fs11', 15)" class="i">ages&#39;</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 16)" onmouseover="showTip(event, 'fs12', 16)" class="i">Median</span>()</pre>
+</td>
+</tr>
+</table>
+
+<pre><code>32.0
+</code></pre>
+
+<p>Median changes from 4 to 32 after adding only couple more data.</p>
+
+<p>Mode is a value that is most frequent.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Multimodal_distribution">Multi-modal and Bimodal distribution</a></p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 17)" onmouseover="showTip(event, 'fs13', 17)" class="i">mode</span> <span onmouseout="hideTip(event, 'fs14', 18)" onmouseover="showTip(event, 'fs14', 18)" class="i">list</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs14', 19)" onmouseover="showTip(event, 'fs14', 19)" class="i">list</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs5', 20)" onmouseover="showTip(event, 'fs5', 20)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 21)" onmouseover="showTip(event, 'fs15', 21)" class="i">groupBy</span> <span onmouseout="hideTip(event, 'fs16', 22)" onmouseover="showTip(event, 'fs16', 22)" class="i">id</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs5', 23)" onmouseover="showTip(event, 'fs5', 23)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 24)" onmouseover="showTip(event, 'fs17', 24)" class="i">maxBy</span> (<span class="k">fun</span> (<span onmouseout="hideTip(event, 'fs18', 25)" onmouseover="showTip(event, 'fs18', 25)" class="i">k</span>,<span onmouseout="hideTip(event, 'fs19', 26)" onmouseover="showTip(event, 'fs19', 26)" class="i">v</span>) <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs19', 27)" onmouseover="showTip(event, 'fs19', 27)" class="i">v</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs5', 28)" onmouseover="showTip(event, 'fs5', 28)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs20', 29)" onmouseover="showTip(event, 'fs20', 29)" class="i">length</span>) <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs21', 30)" onmouseover="showTip(event, 'fs21', 30)" class="i">fst</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs22', 31)" onmouseover="showTip(event, 'fs22', 31)" class="i">values</span> <span class="o">=</span> [<span class="n">5.</span>;<span class="n">9.</span>;<span class="n">100.</span>;<span class="n">9.</span>;<span class="n">97.</span>;<span class="n">6.</span>;<span class="n">9.</span>;<span class="n">98.</span>;<span class="n">9.</span>]
+<span onmouseout="hideTip(event, 'fs22', 32)" onmouseover="showTip(event, 'fs22', 32)" class="i">values</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 33)" onmouseover="showTip(event, 'fs10', 33)" class="i">Mean</span>()
+<span onmouseout="hideTip(event, 'fs22', 34)" onmouseover="showTip(event, 'fs22', 34)" class="i">values</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 35)" onmouseover="showTip(event, 'fs12', 35)" class="i">Median</span>()
+<span onmouseout="hideTip(event, 'fs22', 36)" onmouseover="showTip(event, 'fs22', 36)" class="i">values</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs13', 37)" onmouseover="showTip(event, 'fs13', 37)" class="i">mode</span></pre>
+</td>
+</tr>
+</table>
+
+<pre><code>38.0
+</code></pre>
+
+<pre><code>9.0
+</code></pre>
+
+<pre><code>9.0
+</code></pre>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs23', 38)" onmouseover="showTip(event, 'fs23', 38)" class="i">values&#39;</span> <span class="o">=</span> [<span class="n">3.</span>;<span class="n">9.</span>;<span class="n">3.</span>;<span class="n">8.</span>;<span class="n">2.</span>;<span class="n">9.</span>;<span class="n">1.</span>;<span class="n">9.</span>;<span class="n">2.</span>;<span class="n">4.</span>]
+<span onmouseout="hideTip(event, 'fs23', 39)" onmouseover="showTip(event, 'fs23', 39)" class="i">values&#39;</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 40)" onmouseover="showTip(event, 'fs10', 40)" class="i">Mean</span>()
+<span onmouseout="hideTip(event, 'fs23', 41)" onmouseover="showTip(event, 'fs23', 41)" class="i">values&#39;</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 42)" onmouseover="showTip(event, 'fs12', 42)" class="i">Median</span>()
+<span onmouseout="hideTip(event, 'fs23', 43)" onmouseover="showTip(event, 'fs23', 43)" class="i">values&#39;</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs13', 44)" onmouseover="showTip(event, 'fs13', 44)" class="i">mode</span></pre>
+</td>
+</tr>
+</table>
+
 <div class="tip" id="fs1">namespace MathNet</div>
 <div class="tip" id="fs2">namespace MathNet.Numerics</div>
 <div class="tip" id="fs3">namespace MathNet.Numerics.Statistics</div>
@@ -133,6 +199,19 @@
 <div class="tip" id="fs8">val median : float<br /><br />Full name: 14-Averages.median</div>
 <div class="tip" id="fs9">val ages : float list<br /><br />Full name: 14-Averages.ages</div>
 <div class="tip" id="fs10">(extension) System.Collections.Generic.IEnumerable.Mean() : float</div>
+<div class="tip" id="fs11">val ages&#39; : float list<br /><br />Full name: 14-Averages.ages&#39;</div>
+<div class="tip" id="fs12">(extension) System.Collections.Generic.IEnumerable.Median() : float</div>
+<div class="tip" id="fs13">val mode : list:seq&lt;&#39;a&gt; -&gt; &#39;a (requires equality)<br /><br />Full name: 14-Averages.mode</div>
+<div class="tip" id="fs14">Multiple items<br />val list : seq&lt;&#39;a&gt; (requires equality)<br /><br />--------------------<br />type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
+<div class="tip" id="fs15">val groupBy : projection:(&#39;T -&gt; &#39;Key) -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;Key * seq&lt;&#39;T&gt;&gt; (requires equality)<br /><br />Full name: Microsoft.FSharp.Collections.Seq.groupBy</div>
+<div class="tip" id="fs16">val id : x:&#39;T -&gt; &#39;T<br /><br />Full name: Microsoft.FSharp.Core.Operators.id</div>
+<div class="tip" id="fs17">val maxBy : projection:(&#39;T -&gt; &#39;U) -&gt; source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires comparison)<br /><br />Full name: Microsoft.FSharp.Collections.Seq.maxBy</div>
+<div class="tip" id="fs18">val k : &#39;a (requires equality)</div>
+<div class="tip" id="fs19">val v : seq&lt;&#39;a&gt; (requires equality)</div>
+<div class="tip" id="fs20">val length : source:seq&lt;&#39;T&gt; -&gt; int<br /><br />Full name: Microsoft.FSharp.Collections.Seq.length</div>
+<div class="tip" id="fs21">val fst : tuple:(&#39;T1 * &#39;T2) -&gt; &#39;T1<br /><br />Full name: Microsoft.FSharp.Core.Operators.fst</div>
+<div class="tip" id="fs22">val values : float list<br /><br />Full name: 14-Averages.values</div>
+<div class="tip" id="fs23">val values&#39; : float list<br /><br />Full name: 14-Averages.values&#39;</div>
 
 
                     
