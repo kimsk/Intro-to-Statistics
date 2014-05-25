@@ -15,11 +15,9 @@ friends.Mean()
 family.Mean()
 (*** include-value: friends.Mean() ***)
 (*** include-value: family.Mean() ***)
-let variance (list:seq<float>) =
-    let count = list |> Seq.length
+let variance (list:seq<float>) =    
     let mean = list.Mean()
-
-    (list |> Seq.map (fun x -> (x-mean)*(x-mean)) |> Seq.sum)/(float(count))
+    (list |> Seq.map (fun x -> (x-mean)*(x-mean))).Mean()
 
 
 friends |> variance // or friends.PopulationVariance()
