@@ -1,6 +1,6 @@
 ﻿(*** hide ***)
 #I ".."
-#load "packages/FsLab.0.0.13-beta/FsLab.fsx"
+#load "packages/FsLab.0.0.14-beta/FsLab.fsx"
 open FSharp.Charting
 (**
 Estimation
@@ -16,7 +16,7 @@ Empirical evidence (also empirical data, sense experience, empirical knowledge, 
 
 Estimation problem is: Data -> p -> P(DATA)
 
-**101***
+**101**
 *)
 let ``list of p`` = [|1./2.;1./3.;2./3.;1.|]
 

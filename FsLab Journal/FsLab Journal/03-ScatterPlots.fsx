@@ -1,6 +1,6 @@
 ﻿(*** hide ***)
 #I ".."
-#load "packages/FsLab.0.0.13-beta/FsLab.fsx"
+#load "packages/FsLab.0.0.14-beta/FsLab.fsx"
 
 (**
 Scatter Plots
