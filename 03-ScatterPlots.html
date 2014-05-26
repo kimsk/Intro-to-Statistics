@@ -26,15 +26,14 @@
   <body>
     <div class="container">
       <div class="masthead">
-          <ul class="nav nav-pills pull-right">
-              <li><a href="https://www.udacity.com/course/st101">Udacity</a></li>
-              <li><a href="http://fslab.org">fslab.org</a></li>
-              <li><a href="http://bluemountaincapital.github.io/Deedle">Deedle</a></li>
-              <li><a href="http://bluemountaincapital.github.io/FSharpRProvider">R Provider</a></li>
-              <li><a href="http://fsharp.github.io/FSharp.Data/">F# Data</a></li>
-              <li><a href="http://fsharp.github.io/FSharp.Charting/">F# Charting</a></li>
-          </ul>
-        <h3><a class="muted" href="index.html">Intro to Statistics</a></h3>
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fslab.org">fslab.org</a></li>
+          <li><a href="http://bluemountaincapital.github.io/Deedle">Deedle</a></li>
+          <li><a href="http://bluemountaincapital.github.io/FSharpRProvider">R Provider</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Data/">F# Data</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Charting/">F# Charting</a></li>
+        </ul>
+        <h3 class="muted">FsLab Journal</h3>
       </div>
       <hr />
       <div class="row" style="margin-top:30px">
@@ -60,14 +59,60 @@
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="i">sizes</span> <span class="o">=</span> [<span class="n">1700</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 6)" onmouseover="showTip(event, 'fs2', 6)" class="i">sqft</span><span class="o">&gt;</span>;<span class="n">2100</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">sqft</span><span class="o">&gt;</span>;<span class="n">1900</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 8)" onmouseover="showTip(event, 'fs2', 8)" class="i">sqft</span><span class="o">&gt;</span>;<span class="n">1300</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 9)" onmouseover="showTip(event, 'fs2', 9)" class="i">sqft</span><span class="o">&gt;</span>;<span class="n">1600</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 10)" onmouseover="showTip(event, 'fs2', 10)" class="i">sqft</span><span class="o">&gt;</span>;<span class="n">2200</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 11)" onmouseover="showTip(event, 'fs2', 11)" class="i">sqft</span>&gt;]
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs5', 12)" onmouseover="showTip(event, 'fs5', 12)" class="i">prices1</span> <span class="o">=</span> [<span class="n">51000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 13)" onmouseover="showTip(event, 'fs3', 13)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">63000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 14)" onmouseover="showTip(event, 'fs3', 14)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">57000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 15)" onmouseover="showTip(event, 'fs3', 15)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">39000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 16)" onmouseover="showTip(event, 'fs3', 16)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">48000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 17)" onmouseover="showTip(event, 'fs3', 17)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">66000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 18)" onmouseover="showTip(event, 'fs3', 18)" class="i">dollar</span>&gt;]
 
-<span class="k">open</span> <span class="i">Deedle</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs6', 19)" onmouseover="showTip(event, 'fs6', 19)" class="i">df1</span> <span class="o">=</span> <span class="i">Frame</span>([<span class="s">&quot;</span><span class="s">size</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">price</span><span class="s">&quot;</span>], [ <span class="i">Series</span><span class="o">.</span><span class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs4', 20)" onmouseover="showTip(event, 'fs4', 20)" class="i">sizes</span>; <span class="i">Series</span><span class="o">.</span><span class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs5', 21)" onmouseover="showTip(event, 'fs5', 21)" class="i">prices1</span>])</pre>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs6', 19)" onmouseover="showTip(event, 'fs6', 19)" class="i">Deedle</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 20)" onmouseover="showTip(event, 'fs7', 20)" class="i">df1</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 21)" onmouseover="showTip(event, 'fs8', 21)" class="i">Frame</span>([<span class="s">&quot;</span><span class="s">size</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">price</span><span class="s">&quot;</span>], [ <span onmouseout="hideTip(event, 'fs9', 22)" onmouseover="showTip(event, 'fs9', 22)" class="i">Series</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 23)" onmouseover="showTip(event, 'fs10', 23)" class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs4', 24)" onmouseover="showTip(event, 'fs4', 24)" class="i">sizes</span>; <span onmouseout="hideTip(event, 'fs9', 25)" onmouseover="showTip(event, 'fs9', 25)" class="i">Series</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 26)" onmouseover="showTip(event, 'fs10', 26)" class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs5', 27)" onmouseover="showTip(event, 'fs5', 27)" class="i">prices1</span>])</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
-</code></pre>
+<div class="deedleframe">
+
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><p>size</p></th>
+<th><p>price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>0</p></td>
+<td><p>1700</p></td>
+<td><p>51000</p></td>
+</tr>
+<tr class="even">
+<td><p>1</p></td>
+<td><p>2100</p></td>
+<td><p>63000</p></td>
+</tr>
+<tr class="odd">
+<td><p>2</p></td>
+<td><p>1900</p></td>
+<td><p>57000</p></td>
+</tr>
+<tr class="even">
+<td><p>3</p></td>
+<td><p>1300</p></td>
+<td><p>39000</p></td>
+</tr>
+<tr class="odd">
+<td><p>4</p></td>
+<td><p>1600</p></td>
+<td><p>48000</p></td>
+</tr>
+<tr class="even">
+<td><p>5</p></td>
+<td><p>2200</p></td>
+<td><p>66000</p></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
@@ -75,14 +120,13 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span class="i">FSharp</span><span class="o">.</span><span class="i">Charting</span>
-<span class="i">Chart</span><span class="o">.</span><span class="i">Point</span>(<span onmouseout="hideTip(event, 'fs7', 22)" onmouseover="showTip(event, 'fs7', 22)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs4', 24)" onmouseover="showTip(event, 'fs4', 24)" class="i">sizes</span> <span onmouseout="hideTip(event, 'fs5', 25)" onmouseover="showTip(event, 'fs5', 25)" class="i">prices1</span>)</pre>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs11', 28)" onmouseover="showTip(event, 'fs11', 28)" class="i">FSharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 29)" onmouseover="showTip(event, 'fs12', 29)" class="i">Charting</span>
+<span onmouseout="hideTip(event, 'fs13', 30)" onmouseover="showTip(event, 'fs13', 30)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 31)" onmouseover="showTip(event, 'fs14', 31)" class="i">Point</span>(<span onmouseout="hideTip(event, 'fs15', 32)" onmouseover="showTip(event, 'fs15', 32)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 33)" onmouseover="showTip(event, 'fs16', 33)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs4', 34)" onmouseover="showTip(event, 'fs4', 34)" class="i">sizes</span> <span onmouseout="hideTip(event, 'fs5', 35)" onmouseover="showTip(event, 'fs5', 35)" class="i">prices1</span>)</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
-</code></pre>
+<p><img src="./images/chart1.png" alt="" /></p>
 
 <p>Is this <a href="https://en.wikipedia.org/wiki/Linear">Linear</a>? <strong>Yes</strong></p>
 
@@ -93,12 +137,12 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 26)" onmouseover="showTip(event, 'fs9', 26)" class="i">pricePerSqrft1</span> <span class="o">=</span> (<span onmouseout="hideTip(event, 'fs7', 27)" onmouseover="showTip(event, 'fs7', 27)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 28)" onmouseover="showTip(event, 'fs10', 28)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs5', 29)" onmouseover="showTip(event, 'fs5', 29)" class="i">prices1</span>)<span class="o">/</span>(<span onmouseout="hideTip(event, 'fs7', 30)" onmouseover="showTip(event, 'fs7', 30)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 31)" onmouseover="showTip(event, 'fs10', 31)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs4', 32)" onmouseover="showTip(event, 'fs4', 32)" class="i">sizes</span>)</pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs17', 36)" onmouseover="showTip(event, 'fs17', 36)" class="i">pricePerSqrft1</span> <span class="o">=</span> (<span onmouseout="hideTip(event, 'fs15', 37)" onmouseover="showTip(event, 'fs15', 37)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 38)" onmouseover="showTip(event, 'fs18', 38)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs5', 39)" onmouseover="showTip(event, 'fs5', 39)" class="i">prices1</span>)<span class="o">/</span>(<span onmouseout="hideTip(event, 'fs15', 40)" onmouseover="showTip(event, 'fs15', 40)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 41)" onmouseover="showTip(event, 'fs18', 41)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs4', 42)" onmouseover="showTip(event, 'fs4', 42)" class="i">sizes</span>)</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
+<pre><code>30
 </code></pre>
 
 <p><em></em> Second data set</p>
@@ -109,27 +153,72 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 33)" onmouseover="showTip(event, 'fs11', 33)" class="i">prices2</span> <span class="o">=</span> [<span class="n">53000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 34)" onmouseover="showTip(event, 'fs3', 34)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">65000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 35)" onmouseover="showTip(event, 'fs3', 35)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">59000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 36)" onmouseover="showTip(event, 'fs3', 36)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">41000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 37)" onmouseover="showTip(event, 'fs3', 37)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">50000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 38)" onmouseover="showTip(event, 'fs3', 38)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">68000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 39)" onmouseover="showTip(event, 'fs3', 39)" class="i">dollar</span>&gt;]
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs12', 40)" onmouseover="showTip(event, 'fs12', 40)" class="i">df2</span> <span class="o">=</span> <span class="i">Frame</span>([<span class="s">&quot;</span><span class="s">size</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">price</span><span class="s">&quot;</span>], [ <span class="i">Series</span><span class="o">.</span><span class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs4', 41)" onmouseover="showTip(event, 'fs4', 41)" class="i">sizes</span>; <span class="i">Series</span><span class="o">.</span><span class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs11', 42)" onmouseover="showTip(event, 'fs11', 42)" class="i">prices2</span>])</pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs19', 43)" onmouseover="showTip(event, 'fs19', 43)" class="i">prices2</span> <span class="o">=</span> [<span class="n">53000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 44)" onmouseover="showTip(event, 'fs3', 44)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">65000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 45)" onmouseover="showTip(event, 'fs3', 45)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">59000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 46)" onmouseover="showTip(event, 'fs3', 46)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">41000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 47)" onmouseover="showTip(event, 'fs3', 47)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">50000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 48)" onmouseover="showTip(event, 'fs3', 48)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">68000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 49)" onmouseover="showTip(event, 'fs3', 49)" class="i">dollar</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs20', 50)" onmouseover="showTip(event, 'fs20', 50)" class="i">df2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 51)" onmouseover="showTip(event, 'fs8', 51)" class="i">Frame</span>([<span class="s">&quot;</span><span class="s">size</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">price</span><span class="s">&quot;</span>], [ <span onmouseout="hideTip(event, 'fs9', 52)" onmouseover="showTip(event, 'fs9', 52)" class="i">Series</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 53)" onmouseover="showTip(event, 'fs10', 53)" class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs4', 54)" onmouseover="showTip(event, 'fs4', 54)" class="i">sizes</span>; <span onmouseout="hideTip(event, 'fs9', 55)" onmouseover="showTip(event, 'fs9', 55)" class="i">Series</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 56)" onmouseover="showTip(event, 'fs10', 56)" class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs19', 57)" onmouseover="showTip(event, 'fs19', 57)" class="i">prices2</span>])</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
-</code></pre>
+<div class="deedleframe">
+
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><p>size</p></th>
+<th><p>price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>0</p></td>
+<td><p>1700</p></td>
+<td><p>53000</p></td>
+</tr>
+<tr class="even">
+<td><p>1</p></td>
+<td><p>2100</p></td>
+<td><p>65000</p></td>
+</tr>
+<tr class="odd">
+<td><p>2</p></td>
+<td><p>1900</p></td>
+<td><p>59000</p></td>
+</tr>
+<tr class="even">
+<td><p>3</p></td>
+<td><p>1300</p></td>
+<td><p>41000</p></td>
+</tr>
+<tr class="odd">
+<td><p>4</p></td>
+<td><p>1600</p></td>
+<td><p>50000</p></td>
+</tr>
+<tr class="even">
+<td><p>5</p></td>
+<td><p>2200</p></td>
+<td><p>68000</p></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">Chart</span><span class="o">.</span><span class="i">Point</span>(<span onmouseout="hideTip(event, 'fs7', 43)" onmouseover="showTip(event, 'fs7', 43)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 44)" onmouseover="showTip(event, 'fs8', 44)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs4', 45)" onmouseover="showTip(event, 'fs4', 45)" class="i">sizes</span> <span onmouseout="hideTip(event, 'fs11', 46)" onmouseover="showTip(event, 'fs11', 46)" class="i">prices2</span>)</pre>
+<span onmouseout="hideTip(event, 'fs13', 58)" onmouseover="showTip(event, 'fs13', 58)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 59)" onmouseover="showTip(event, 'fs14', 59)" class="i">Point</span>(<span onmouseout="hideTip(event, 'fs15', 60)" onmouseover="showTip(event, 'fs15', 60)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 61)" onmouseover="showTip(event, 'fs16', 61)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs4', 62)" onmouseover="showTip(event, 'fs4', 62)" class="i">sizes</span> <span onmouseout="hideTip(event, 'fs19', 63)" onmouseover="showTip(event, 'fs19', 63)" class="i">prices2</span>)</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
-</code></pre>
+<p><img src="./images/chart2.png" alt="" /></p>
 
 <p>Is this <a href="https://en.wikipedia.org/wiki/Linear">Linear</a>? <strong>Yes</strong></p>
 
@@ -140,12 +229,12 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 47)" onmouseover="showTip(event, 'fs13', 47)" class="i">pricePerSqrft2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs14', 48)" onmouseover="showTip(event, 'fs14', 48)" class="i">float</span>(<span onmouseout="hideTip(event, 'fs7', 49)" onmouseover="showTip(event, 'fs7', 49)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 50)" onmouseover="showTip(event, 'fs10', 50)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs11', 51)" onmouseover="showTip(event, 'fs11', 51)" class="i">prices2</span>)<span class="o">/</span><span onmouseout="hideTip(event, 'fs14', 52)" onmouseover="showTip(event, 'fs14', 52)" class="i">float</span>(<span onmouseout="hideTip(event, 'fs7', 53)" onmouseover="showTip(event, 'fs7', 53)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 54)" onmouseover="showTip(event, 'fs10', 54)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs4', 55)" onmouseover="showTip(event, 'fs4', 55)" class="i">sizes</span>)</pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs21', 64)" onmouseover="showTip(event, 'fs21', 64)" class="i">pricePerSqrft2</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs22', 65)" onmouseover="showTip(event, 'fs22', 65)" class="i">float</span>(<span onmouseout="hideTip(event, 'fs15', 66)" onmouseover="showTip(event, 'fs15', 66)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 67)" onmouseover="showTip(event, 'fs18', 67)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs19', 68)" onmouseover="showTip(event, 'fs19', 68)" class="i">prices2</span>)<span class="o">/</span><span onmouseout="hideTip(event, 'fs22', 69)" onmouseover="showTip(event, 'fs22', 69)" class="i">float</span>(<span onmouseout="hideTip(event, 'fs15', 70)" onmouseover="showTip(event, 'fs15', 70)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 71)" onmouseover="showTip(event, 'fs18', 71)" class="i">sum</span> <span onmouseout="hideTip(event, 'fs4', 72)" onmouseover="showTip(event, 'fs4', 72)" class="i">sizes</span>)</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
+<pre><code>31.11111111
 </code></pre>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
@@ -153,12 +242,12 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs15', 56)" onmouseover="showTip(event, 'fs15', 56)" class="i">firstHome</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs13', 57)" onmouseover="showTip(event, 'fs13', 57)" class="i">pricePerSqrft2</span><span class="o">*</span><span class="n">1700.</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 58)" onmouseover="showTip(event, 'fs2', 58)" class="i">sqft</span><span class="o">&gt;</span></pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs23', 73)" onmouseover="showTip(event, 'fs23', 73)" class="i">firstHome</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs21', 74)" onmouseover="showTip(event, 'fs21', 74)" class="i">pricePerSqrft2</span><span class="o">*</span><span class="n">1700.</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 75)" onmouseover="showTip(event, 'fs2', 75)" class="i">sqft</span><span class="o">&gt;</span></pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
+<pre><code>52888.88889
 </code></pre>
 
 <p>How to calculate the price?</p>
@@ -168,7 +257,7 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="n">30</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 59)" onmouseover="showTip(event, 'fs3', 59)" class="i">dollar</span><span class="o">/</span><span onmouseout="hideTip(event, 'fs2', 60)" onmouseover="showTip(event, 'fs2', 60)" class="i">sqft</span><span class="o">&gt;</span><span class="o">*</span><span class="n">1700</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 61)" onmouseover="showTip(event, 'fs2', 61)" class="i">sqft</span><span class="o">&gt;</span> <span class="o">+</span> <span class="n">2000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 62)" onmouseover="showTip(event, 'fs3', 62)" class="i">dollar</span><span class="o">&gt;</span></pre>
+<span class="n">30</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 76)" onmouseover="showTip(event, 'fs3', 76)" class="i">dollar</span><span class="o">/</span><span onmouseout="hideTip(event, 'fs2', 77)" onmouseover="showTip(event, 'fs2', 77)" class="i">sqft</span><span class="o">&gt;</span><span class="o">*</span><span class="n">1700</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs2', 78)" onmouseover="showTip(event, 'fs2', 78)" class="i">sqft</span><span class="o">&gt;</span> <span class="o">+</span> <span class="n">2000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 79)" onmouseover="showTip(event, 'fs3', 79)" class="i">dollar</span><span class="o">&gt;</span></pre>
 </td>
 </tr>
 </table>
@@ -182,28 +271,73 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs16', 63)" onmouseover="showTip(event, 'fs16', 63)" class="i">prices3</span> <span class="o">=</span> [<span class="n">53000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 64)" onmouseover="showTip(event, 'fs3', 64)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">44000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 65)" onmouseover="showTip(event, 'fs3', 65)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">59000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 66)" onmouseover="showTip(event, 'fs3', 66)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">82000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 67)" onmouseover="showTip(event, 'fs3', 67)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">50000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 68)" onmouseover="showTip(event, 'fs3', 68)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">68000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 69)" onmouseover="showTip(event, 'fs3', 69)" class="i">dollar</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs24', 80)" onmouseover="showTip(event, 'fs24', 80)" class="i">prices3</span> <span class="o">=</span> [<span class="n">53000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 81)" onmouseover="showTip(event, 'fs3', 81)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">44000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 82)" onmouseover="showTip(event, 'fs3', 82)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">59000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 83)" onmouseover="showTip(event, 'fs3', 83)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">82000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 84)" onmouseover="showTip(event, 'fs3', 84)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">50000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 85)" onmouseover="showTip(event, 'fs3', 85)" class="i">dollar</span><span class="o">&gt;</span>;<span class="n">68000</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs3', 86)" onmouseover="showTip(event, 'fs3', 86)" class="i">dollar</span>&gt;]
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs17', 70)" onmouseover="showTip(event, 'fs17', 70)" class="i">df3</span> <span class="o">=</span> <span class="i">Frame</span>([<span class="s">&quot;</span><span class="s">size</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">price</span><span class="s">&quot;</span>],  [ <span class="i">Series</span><span class="o">.</span><span class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs4', 71)" onmouseover="showTip(event, 'fs4', 71)" class="i">sizes</span>; <span class="i">Series</span><span class="o">.</span><span class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs16', 72)" onmouseover="showTip(event, 'fs16', 72)" class="i">prices3</span>])</pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs25', 87)" onmouseover="showTip(event, 'fs25', 87)" class="i">df3</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 88)" onmouseover="showTip(event, 'fs8', 88)" class="i">Frame</span>([<span class="s">&quot;</span><span class="s">size</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">price</span><span class="s">&quot;</span>],  [ <span onmouseout="hideTip(event, 'fs9', 89)" onmouseover="showTip(event, 'fs9', 89)" class="i">Series</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 90)" onmouseover="showTip(event, 'fs10', 90)" class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs4', 91)" onmouseover="showTip(event, 'fs4', 91)" class="i">sizes</span>; <span onmouseout="hideTip(event, 'fs9', 92)" onmouseover="showTip(event, 'fs9', 92)" class="i">Series</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 93)" onmouseover="showTip(event, 'fs10', 93)" class="i">ofValues</span> <span onmouseout="hideTip(event, 'fs24', 94)" onmouseover="showTip(event, 'fs24', 94)" class="i">prices3</span>])</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
-</code></pre>
+<div class="deedleframe">
+
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><p>size</p></th>
+<th><p>price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><p>0</p></td>
+<td><p>1700</p></td>
+<td><p>53000</p></td>
+</tr>
+<tr class="even">
+<td><p>1</p></td>
+<td><p>2100</p></td>
+<td><p>44000</p></td>
+</tr>
+<tr class="odd">
+<td><p>2</p></td>
+<td><p>1900</p></td>
+<td><p>59000</p></td>
+</tr>
+<tr class="even">
+<td><p>3</p></td>
+<td><p>1300</p></td>
+<td><p>82000</p></td>
+</tr>
+<tr class="odd">
+<td><p>4</p></td>
+<td><p>1600</p></td>
+<td><p>50000</p></td>
+</tr>
+<tr class="even">
+<td><p>5</p></td>
+<td><p>2200</p></td>
+<td><p>68000</p></td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">Chart</span><span class="o">.</span><span class="i">Point</span>(<span onmouseout="hideTip(event, 'fs7', 73)" onmouseover="showTip(event, 'fs7', 73)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 74)" onmouseover="showTip(event, 'fs8', 74)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs4', 75)" onmouseover="showTip(event, 'fs4', 75)" class="i">sizes</span> <span onmouseout="hideTip(event, 'fs16', 76)" onmouseover="showTip(event, 'fs16', 76)" class="i">prices3</span>)</pre>
+<span onmouseout="hideTip(event, 'fs13', 95)" onmouseover="showTip(event, 'fs13', 95)" class="i">Chart</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 96)" onmouseover="showTip(event, 'fs14', 96)" class="i">Point</span>(<span onmouseout="hideTip(event, 'fs15', 97)" onmouseover="showTip(event, 'fs15', 97)" class="i">Seq</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 98)" onmouseover="showTip(event, 'fs16', 98)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs4', 99)" onmouseover="showTip(event, 'fs4', 99)" class="i">sizes</span> <span onmouseout="hideTip(event, 'fs24', 100)" onmouseover="showTip(event, 'fs24', 100)" class="i">prices3</span>)</pre>
 </td>
 </tr>
 </table>
 
-<pre><code>No value has been returned
-</code></pre>
+<p><img src="./images/chart3.png" alt="" /></p>
 
 <p>Is this <a href="https://en.wikipedia.org/wiki/Linear">Linear</a>? <strong>No</strong>, because there are <a href="https://en.wikipedia.org/wiki/Outlier">Outlier</a>s</p>
 
@@ -212,18 +346,26 @@
 <div class="tip" id="fs3">[&lt;Measure&gt;]<br />type dollar<br /><br />Full name: 03-ScatterPlots.dollar</div>
 <div class="tip" id="fs4">val sizes : int&lt;sqft&gt; list<br /><br />Full name: 03-ScatterPlots.sizes</div>
 <div class="tip" id="fs5">val prices1 : int&lt;dollar&gt; list<br /><br />Full name: 03-ScatterPlots.prices1</div>
-<div class="tip" id="fs6">val df1 : obj<br /><br />Full name: 03-ScatterPlots.df1</div>
-<div class="tip" id="fs7">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
-<div class="tip" id="fs8">val zip : source1:seq&lt;&#39;T1&gt; -&gt; source2:seq&lt;&#39;T2&gt; -&gt; seq&lt;&#39;T1 * &#39;T2&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.zip</div>
-<div class="tip" id="fs9">val pricePerSqrft1 : int&lt;dollar/sqft&gt;<br /><br />Full name: 03-ScatterPlots.pricePerSqrft1</div>
-<div class="tip" id="fs10">val sum : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires member ( + ) and member get_Zero)<br /><br />Full name: Microsoft.FSharp.Collections.Seq.sum</div>
-<div class="tip" id="fs11">val prices2 : int&lt;dollar&gt; list<br /><br />Full name: 03-ScatterPlots.prices2</div>
-<div class="tip" id="fs12">val df2 : obj<br /><br />Full name: 03-ScatterPlots.df2</div>
-<div class="tip" id="fs13">val pricePerSqrft2 : float<br /><br />Full name: 03-ScatterPlots.pricePerSqrft2</div>
-<div class="tip" id="fs14">Multiple items<br />val float : value:&#39;T -&gt; float (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.float<br /><br />--------------------<br />type float = System.Double<br /><br />Full name: Microsoft.FSharp.Core.float<br /><br />--------------------<br />type float&lt;&#39;Measure&gt; = float<br /><br />Full name: Microsoft.FSharp.Core.float&lt;_&gt;</div>
-<div class="tip" id="fs15">val firstHome : float&lt;sqft&gt;<br /><br />Full name: 03-ScatterPlots.firstHome</div>
-<div class="tip" id="fs16">val prices3 : int&lt;dollar&gt; list<br /><br />Full name: 03-ScatterPlots.prices3</div>
-<div class="tip" id="fs17">val df3 : obj<br /><br />Full name: 03-ScatterPlots.df3</div>
+<div class="tip" id="fs6">namespace Deedle</div>
+<div class="tip" id="fs7">val df1 : Frame&lt;int,string&gt;<br /><br />Full name: 03-ScatterPlots.df1</div>
+<div class="tip" id="fs8">Multiple items<br />module Frame<br /><br />from Deedle<br /><br />--------------------<br />type Frame =<br />&#160;&#160;static member CreateEmpty : unit -&gt; Frame&lt;&#39;R,&#39;C&gt; (requires equality and equality)<br />&#160;&#160;static member FromArray2D : array:&#39;T [,] -&gt; Frame&lt;int,int&gt;<br />&#160;&#160;static member FromColumns : cols:Series&lt;&#39;TColKey,Series&lt;&#39;TRowKey,&#39;V&gt;&gt; -&gt; Frame&lt;&#39;TRowKey,&#39;TColKey&gt; (requires equality and equality)<br />&#160;&#160;static member FromColumns : cols:Series&lt;&#39;TColKey,ObjectSeries&lt;&#39;TRowKey&gt;&gt; -&gt; Frame&lt;&#39;TRowKey,&#39;TColKey&gt; (requires equality and equality)<br />&#160;&#160;static member FromColumns : columns:seq&lt;KeyValuePair&lt;&#39;ColKey,ObjectSeries&lt;&#39;RowKey&gt;&gt;&gt; -&gt; Frame&lt;&#39;RowKey,&#39;ColKey&gt; (requires equality and equality)<br />&#160;&#160;static member FromColumns : columns:seq&lt;KeyValuePair&lt;&#39;ColKey,Series&lt;&#39;RowKey,&#39;V&gt;&gt;&gt; -&gt; Frame&lt;&#39;RowKey,&#39;ColKey&gt; (requires equality and equality)<br />&#160;&#160;static member FromColumns : rows:seq&lt;Series&lt;&#39;ColKey,&#39;V&gt;&gt; -&gt; Frame&lt;&#39;ColKey,int&gt; (requires equality)<br />&#160;&#160;static member FromRecords : values:seq&lt;&#39;T&gt; -&gt; Frame&lt;int,string&gt;<br />&#160;&#160;static member FromRecords : series:Series&lt;&#39;K,&#39;R&gt; -&gt; Frame&lt;&#39;K,string&gt; (requires equality)<br />&#160;&#160;static member FromRowKeys : keys:seq&lt;&#39;K&gt; -&gt; Frame&lt;&#39;K,string&gt; (requires equality)<br />&#160;&#160;...<br /><br />Full name: Deedle.Frame<br /><br />--------------------<br />type Frame&lt;&#39;TRowKey,&#39;TColumnKey (requires equality and equality)&gt; =<br />&#160;&#160;interface IDynamicMetaObjectProvider<br />&#160;&#160;interface INotifyCollectionChanged<br />&#160;&#160;interface IFsiFormattable<br />&#160;&#160;interface IFrame<br />&#160;&#160;new : names:seq&lt;&#39;TColumnKey&gt; * columns:seq&lt;ISeries&lt;&#39;TRowKey&gt;&gt; -&gt; Frame&lt;&#39;TRowKey,&#39;TColumnKey&gt;<br />&#160;&#160;private new : rowIndex:IIndex&lt;&#39;TRowKey&gt; * columnIndex:IIndex&lt;&#39;TColumnKey&gt; * data:IVector&lt;IVector&gt; -&gt; Frame&lt;&#39;TRowKey,&#39;TColumnKey&gt;<br />&#160;&#160;member AddColumn : column:&#39;TColumnKey * series:ISeries&lt;&#39;TRowKey&gt; -&gt; unit<br />&#160;&#160;member AddColumn : column:&#39;TColumnKey * series:seq&lt;&#39;V&gt; -&gt; unit<br />&#160;&#160;member AddColumn : column:&#39;TColumnKey * series:ISeries&lt;&#39;TRowKey&gt; * lookup:Lookup -&gt; unit<br />&#160;&#160;member AddColumn : column:&#39;TColumnKey * series:seq&lt;&#39;V&gt; * lookup:Lookup -&gt; unit<br />&#160;&#160;...<br /><br />Full name: Deedle.Frame&lt;_,_&gt;<br /><br />--------------------<br />new : names:seq&lt;&#39;TColumnKey&gt; * columns:seq&lt;ISeries&lt;&#39;TRowKey&gt;&gt; -&gt; Frame&lt;&#39;TRowKey,&#39;TColumnKey&gt;</div>
+<div class="tip" id="fs9">Multiple items<br />module Series<br /><br />from Deedle<br /><br />--------------------<br />type Series =<br />&#160;&#160;static member ofNullables : values:seq&lt;Nullable&lt;&#39;a0&gt;&gt; -&gt; Series&lt;int,&#39;a0&gt; (requires default constructor and value type and &#39;a0 :&gt; ValueType)<br />&#160;&#160;static member ofObservations : observations:seq&lt;&#39;a0 * &#39;a1&gt; -&gt; Series&lt;&#39;a0,&#39;a1&gt; (requires equality)<br />&#160;&#160;static member ofOptionalObservations : observations:seq&lt;&#39;K * &#39;a1 option&gt; -&gt; Series&lt;&#39;K,&#39;a1&gt; (requires equality)<br />&#160;&#160;static member ofValues : values:seq&lt;&#39;a0&gt; -&gt; Series&lt;int,&#39;a0&gt;<br /><br />Full name: Deedle.FSharpSeriesExtensions.Series<br /><br />--------------------<br />type Series&lt;&#39;K,&#39;V (requires equality)&gt; =<br />&#160;&#160;interface IFsiFormattable<br />&#160;&#160;interface ISeries&lt;&#39;K&gt;<br />&#160;&#160;new : pairs:seq&lt;KeyValuePair&lt;&#39;K,&#39;V&gt;&gt; -&gt; Series&lt;&#39;K,&#39;V&gt;<br />&#160;&#160;new : keys:seq&lt;&#39;K&gt; * values:seq&lt;&#39;V&gt; -&gt; Series&lt;&#39;K,&#39;V&gt;<br />&#160;&#160;new : index:IIndex&lt;&#39;K&gt; * vector:IVector&lt;&#39;V&gt; * vectorBuilder:IVectorBuilder * indexBuilder:IIndexBuilder -&gt; Series&lt;&#39;K,&#39;V&gt;<br />&#160;&#160;member After : lowerExclusive:&#39;K -&gt; Series&lt;&#39;K,&#39;V&gt;<br />&#160;&#160;member Aggregate : aggregation:Aggregation&lt;&#39;K&gt; * observationSelector:Func&lt;DataSegment&lt;Series&lt;&#39;K,&#39;V&gt;&gt;,KeyValuePair&lt;&#39;TNewKey,OptionalValue&lt;&#39;R&gt;&gt;&gt; -&gt; Series&lt;&#39;TNewKey,&#39;R&gt; (requires equality)<br />&#160;&#160;member Aggregate : aggregation:Aggregation&lt;&#39;K&gt; * keySelector:Func&lt;DataSegment&lt;Series&lt;&#39;K,&#39;V&gt;&gt;,&#39;TNewKey&gt; * valueSelector:Func&lt;DataSegment&lt;Series&lt;&#39;K,&#39;V&gt;&gt;,OptionalValue&lt;&#39;R&gt;&gt; -&gt; Series&lt;&#39;TNewKey,&#39;R&gt; (requires equality)<br />&#160;&#160;member AsyncMaterialize : unit -&gt; Async&lt;Series&lt;&#39;K,&#39;V&gt;&gt;<br />&#160;&#160;member Before : upperExclusive:&#39;K -&gt; Series&lt;&#39;K,&#39;V&gt;<br />&#160;&#160;...<br /><br />Full name: Deedle.Series&lt;_,_&gt;<br /><br />--------------------<br />new : pairs:seq&lt;System.Collections.Generic.KeyValuePair&lt;&#39;K,&#39;V&gt;&gt; -&gt; Series&lt;&#39;K,&#39;V&gt;<br />new : keys:seq&lt;&#39;K&gt; * values:seq&lt;&#39;V&gt; -&gt; Series&lt;&#39;K,&#39;V&gt;<br />new : index:Indices.IIndex&lt;&#39;K&gt; * vector:IVector&lt;&#39;V&gt; * vectorBuilder:Vectors.IVectorBuilder * indexBuilder:Indices.IIndexBuilder -&gt; Series&lt;&#39;K,&#39;V&gt;</div>
+<div class="tip" id="fs10">static member Series.ofValues : values:seq&lt;&#39;a0&gt; -&gt; Series&lt;int,&#39;a0&gt;</div>
+<div class="tip" id="fs11">namespace FSharp</div>
+<div class="tip" id="fs12">namespace FSharp.Charting</div>
+<div class="tip" id="fs13">type Chart =<br />&#160;&#160;static member Area : data:seq&lt;#value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string -&gt; GenericChart<br />&#160;&#160;static member Area : data:seq&lt;#key * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string -&gt; GenericChart<br />&#160;&#160;static member Bar : data:seq&lt;#value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string -&gt; GenericChart<br />&#160;&#160;static member Bar : data:seq&lt;#key * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string -&gt; GenericChart<br />&#160;&#160;static member BoxPlotFromData : data:seq&lt;#key * #seq&lt;&#39;a2&gt;&gt; * ?Name:string * ?Title:string * ?Color:Color * ?XTitle:string * ?YTitle:string * ?Percentile:int * ?ShowAverage:bool * ?ShowMedian:bool * ?ShowUnusualValues:bool * ?WhiskerPercentile:int -&gt; GenericChart (requires &#39;a2 :&gt; value)<br />&#160;&#160;static member BoxPlotFromStatistics : data:seq&lt;#key * #value * #value * #value * #value * #value * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string * ?Percentile:int * ?ShowAverage:bool * ?ShowMedian:bool * ?ShowUnusualValues:bool * ?WhiskerPercentile:int -&gt; GenericChart<br />&#160;&#160;static member Bubble : data:seq&lt;#value * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string * ?BubbleMaxSize:int * ?BubbleMinSize:int * ?BubbleScaleMax:float * ?BubbleScaleMin:float * ?UseSizeForLabel:bool -&gt; GenericChart<br />&#160;&#160;static member Bubble : data:seq&lt;#key * #value * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string * ?BubbleMaxSize:int * ?BubbleMinSize:int * ?BubbleScaleMax:float * ?BubbleScaleMin:float * ?UseSizeForLabel:bool -&gt; GenericChart<br />&#160;&#160;static member Candlestick : data:seq&lt;#value * #value * #value * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string -&gt; CandlestickChart<br />&#160;&#160;static member Candlestick : data:seq&lt;#key * #value * #value * #value * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:Color * ?XTitle:string * ?YTitle:string -&gt; CandlestickChart<br />&#160;&#160;...<br /><br />Full name: FSharp.Charting.Chart</div>
+<div class="tip" id="fs14">static member Chart.Point : data:seq&lt;#value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:System.Drawing.Color * ?XTitle:string * ?YTitle:string * ?MarkerColor:System.Drawing.Color * ?MarkerSize:int -&gt; ChartTypes.GenericChart<br />static member Chart.Point : data:seq&lt;#key * #value&gt; * ?Name:string * ?Title:string * ?Labels:#seq&lt;string&gt; * ?Color:System.Drawing.Color * ?XTitle:string * ?YTitle:string * ?MarkerColor:System.Drawing.Color * ?MarkerSize:int -&gt; ChartTypes.GenericChart</div>
+<div class="tip" id="fs15">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="tip" id="fs16">val zip : source1:seq&lt;&#39;T1&gt; -&gt; source2:seq&lt;&#39;T2&gt; -&gt; seq&lt;&#39;T1 * &#39;T2&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.zip</div>
+<div class="tip" id="fs17">val pricePerSqrft1 : int&lt;dollar/sqft&gt;<br /><br />Full name: 03-ScatterPlots.pricePerSqrft1</div>
+<div class="tip" id="fs18">val sum : source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires member ( + ) and member get_Zero)<br /><br />Full name: Microsoft.FSharp.Collections.Seq.sum</div>
+<div class="tip" id="fs19">val prices2 : int&lt;dollar&gt; list<br /><br />Full name: 03-ScatterPlots.prices2</div>
+<div class="tip" id="fs20">val df2 : Frame&lt;int,string&gt;<br /><br />Full name: 03-ScatterPlots.df2</div>
+<div class="tip" id="fs21">val pricePerSqrft2 : float<br /><br />Full name: 03-ScatterPlots.pricePerSqrft2</div>
+<div class="tip" id="fs22">Multiple items<br />val float : value:&#39;T -&gt; float (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.float<br /><br />--------------------<br />type float = System.Double<br /><br />Full name: Microsoft.FSharp.Core.float<br /><br />--------------------<br />type float&lt;&#39;Measure&gt; = float<br /><br />Full name: Microsoft.FSharp.Core.float&lt;_&gt;</div>
+<div class="tip" id="fs23">val firstHome : float&lt;sqft&gt;<br /><br />Full name: 03-ScatterPlots.firstHome</div>
+<div class="tip" id="fs24">val prices3 : int&lt;dollar&gt; list<br /><br />Full name: 03-ScatterPlots.prices3</div>
+<div class="tip" id="fs25">val df3 : Frame&lt;int,string&gt;<br /><br />Full name: 03-ScatterPlots.df3</div>
 
 
                     
