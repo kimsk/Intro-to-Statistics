@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsLab Notebook", "FsLab Notebook\FsLab Notebook.fsproj", "{81243959-5415-41CB-80A2-2BF468C0D6D0}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsLab Journal", "FsLab Journal\FsLab Journal.fsproj", "{81243959-5415-41CB-80A2-2BF468C0D6D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
