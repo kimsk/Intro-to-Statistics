@@ -53,6 +53,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <None Include="03-ScatterPlots.fsx" />
+    <None Include="04-BarCharts.fsx" />
     <None Include="05-PieCharts.fsx" />
     <None Include="06-ProgrammingCharts.fsx" />
     <None Include="07-AdmissionsCaseStudy.fsx" />
@@ -69,7 +70,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
     <Compile Include="Main.fs" />
-    <None Include="04-BarCharts.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="CSharpFormat">
