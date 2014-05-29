@@ -12,5 +12,5 @@ let main args =
   let latex = args |> Seq.exists ((=) "--latex")
   let browse = args |> Seq.exists ((=) "--non-interactive") |> not
   if latex then Journal.Process(outputKind = OutputKind.Latex)
-  else Journal.Process(browse)
+  else Journal.Process(browse, templateLocation = @"G:\GitHub\Intro-to-Statistics")
   0

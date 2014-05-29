@@ -116,8 +116,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="FsLab.Runner">
-      <HintPath>$(SolutionDir)\packages\FsLab.Runner.0.0.14-beta\lib\net40\FsLab.Runner.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\..\..\FsLab\bin\FsLab.Runner.dll</HintPath>
     </Reference>
     <Reference Include="MathNet.Numerics">
       <HintPath>$(SolutionDir)\packages\MathNet.Numerics.3.0.0-beta01\lib\net40\MathNet.Numerics.dll</HintPath>
